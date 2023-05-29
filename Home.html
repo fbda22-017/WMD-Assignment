@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+    <title>WARNERS BROS</title>
+</head>
+
+<body>
+  <header>
+    <div class="container flex1">
+      <div class="logo">
+        <img src="C:\Users\fbda22-017\Desktop\Assignment\Images\COVERPHOTO.png" alt="">
+      </div>
+	  <section>
+	  <align"center-left">
+	    <video src="C:\Users\fbda22-017\Desktop\Assignment\Images\Black Knight _ Official Trailer _ Netflix[720p-HD].mp4" width="640" height="480" controls>
+		Your browser does not support the video tag
+		</video>
+	  
+	  </section>
+
+      <div class="sidebar">
+        <nav class="flex">
+          <ul>
+		  <li><a href="#">HOME</a></li>
+            <li><a href="Movies.html">MOVIES</a></li>
+            <li><a href="Tv shows.html">TV SHOWS</a></li>
+            <li><a href="Games And Apps.html">GAMES AND APPS</a></li>
+            <li><a href="Collections.html">COLLECTIONS</a></li>
+           
+          </ul>
+          <div class="icon">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-shopping-bag"></i>
+          </div>
+        </nav>
+
+        <label for="text"> <i class="fas fa-bars"></i> </label>
+        <input type="checkbox" id="text">
+        <div class="side">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="Movies.html">MOVIES</a></li>
+            <li><a href="Tv shows.html">TV SHOWS</a></li>
+            <li><a href="Games And Apps.html">GAMES AND APPS</a></li>
+            <li><a href="Collections.html">COLLECTIONS</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+  <section class="home">
+    <div class="container">
+      <div class="audio">
+        <h1>WARNER BROS</h1>
+        <h3>MOVIES</h3>
+        <h1>YOUR WORLD OF ENTERTAINMENT</h1>
+      </div>
+    </div>
+  </section>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var progressPath = document.querySelector('.progress-wrap path');
+        var pathLength = progressPath.getTotalLength();
+
+        progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+        progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+        progressPath.style.strokeDashoffset = pathLength;
+        progressPath.getBoundingClientRect();
+        progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+
+        var updateProgress = function() {
+          var scroll = $(window).scrollTop();
+          var height = $(document).height() - $(window).height();
+          var progress = pathLength - (scroll * pathLength / height);
+          progressPath.style.strokeDashoffset = progress;
+        }
+
+        updateProgress();
+        $(window).scroll(updateProgress);
+
+        var offset = 50;
+        var duration = 550;
+
+        jQuery(window).on('scroll', function() {
+          if(jQuery(this).scrollTop() > offset) {
+            jQuery('.progress-wrap').addClass('active-progress');
+          } else {
+            jQuery('.progress-wrap').removeClass('active-progress');
+          }
+        });
+
+        jQuery('.progress-wrap').on('click', function(event) {
+          event.preventDefault();
+          jQuery('html, body').animate({scrollTop: 0}, duration);
+          return false;
+        })
+      });
+    </script>
+	
+	<section class="footer">
+		<div class="social">
+			<a href="https://www.facebook.com/warnerbrosent/?ref=page_internal"><i class="bx bxl-facebook"></i></a>
+			<a href="https://www.instagram.com/warnerbrosentertainment/"><i class="bx bxl-instagram"></i></a>
+			<a href="https://www.youtube.com/user/WarnerBrosPictures"><i class="bx bxl-youtube"></i></a>
+		</div>
+	</section> 
+
+<!-- Copyright -->
+<div class="copyright">
+<p>© TM & © 2023 Warner Bros. Entertainment Inc All Right Reserved.</p>
+</div>
+</body>
+</html>
